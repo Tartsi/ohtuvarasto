@@ -52,20 +52,20 @@ class TestVarasto(unittest.TestCase):
     def test_ei_voi_ottaa_negatiivista_maaraa(self):
         varasto = Varasto(10, 10)
         
-        self.assertAlmostEqual(varasto.ota_varastosta(-1), 0.0)
+        self.assertAlmostEqual(varasto.ota_varastosta(1), 0.0)
         
-    # def test_otetaan_ylimaara_varastosta(self):
-    #     varasto = Varasto(10, 10)
+    def test_otetaan_ylimaara_varastosta(self):
+        varasto = Varasto(10, 10)
         
-    #     self.assertAlmostEqual(varasto.ota_varastosta(11), 10)
+        self.assertAlmostEqual(varasto.ota_varastosta(11), 10)
 
-    # def test_ottaminen_lisaa_tilaa(self):
-    #     self.varasto.lisaa_varastoon(8)
+    def test_ottaminen_lisaa_tilaa(self):
+        self.varasto.lisaa_varastoon(8)
 
-    #     self.varasto.ota_varastosta(2)
+        self.varasto.ota_varastosta(2)
 
-    #     # varastossa pitäisi olla tilaa 10 - 8 + 2 eli 4
-    #     self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 4)
+        # varastossa pitäisi olla tilaa 10 - 8 + 2 eli 4
+        self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 4)
 
     def test_varaston_merkkijono_esitys(self):
         varasto = Varasto(10, 10)

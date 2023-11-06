@@ -1,1 +1,0 @@
-Ensimmäisen tiedoston muokkaus notepadia käyttäen komentorivin välityksellä.

@@ -52,7 +52,7 @@ class TestVarasto(unittest.TestCase):
     def test_ei_voi_ottaa_negatiivista_maaraa(self):
         varasto = Varasto(10, 10)
         
-        self.assertAlmostEqual(varasto.ota_varastosta(1), 0.0)
+        self.assertAlmostEqual(varasto.ota_varastosta(-1), 0.0)
         
     def test_otetaan_ylimaara_varastosta(self):
         varasto = Varasto(10, 10)
